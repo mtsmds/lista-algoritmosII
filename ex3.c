@@ -1,27 +1,24 @@
 #include <stdio.h>
 
-int pos(int num);
-
 int main()
 {
-    int n1;
-    scanf("%d", &n1);
-    printf("retorno: %d", (pos(n1)));
-}
+    int a, b;
 
 
-int pos(int num)
-{
-    if(num >0)
+    if(&a>&b)
     {
-        return 1;
+        printf("endereco a: %p\n", &a);
+    }else{
+        printf("endereco b: %p\n", &b);
     }
-    else if( num<0)
+printf("%p %p", &a, &b);
+    scanf("%d %d", &a, &b);
+
+    if(&a<&b)
     {
-    return -1;
+        printf("endereco b: %p\n", &b);
+    }else{
+        printf("endereco a: %p\n", &a);
     }
-    else if(num == 0)
-    {
- return 0;
-    }
+printf("%p %p", &a, &b);
 }

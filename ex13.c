@@ -1,32 +1,22 @@
 #include <stdio.h>
 
-float operacao (float nota1, float nota2, char letra);
+void calc_esfera(float R, float *area, float *volume);
 
 int main()
 {
-    float n1, n2;
-    char a;
-    scanf("%f %f %c", &n1, &n2, &a);
-    printf("resultado: %.2f", (operacao(n1,n2,a)));
+    float raio;
+    float area;
+    float vol;
+
+    scanf("%f", &raio);
+    calc_esfera(raio, &area, &vol);
+return 0;
 }
 
-float operacao (float nota1, float nota2, char letra)
+void calc_esfera(float R, float *area, float *volume)
 {
-switch (letra)
-{
-case '+':
-   return nota1+nota2;
-    break;
-case '-':
-return nota1 - nota2;
-break;
-case '*':
-return nota1*nota2;
-break;
-case '/':
-return nota1/nota2;
-break;
-default:
-    break;
-}
+    *area = 3.14 * 4 *(R*R);
+    *volume = 1.333 * 3.14*(R*R*R);
+
+    printf("area: %f\n vol: %f\n", *area, *volume); 
 }

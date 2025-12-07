@@ -1,14 +1,22 @@
 #include <stdio.h>
-int dobro(int valor);
 
+void alteravalor (int *x, float *y, char *z);
 int main()
 {
-    int num;
-    printf("digite um numero\n");
-    scanf("%d", &num);
-    printf("%d", (dobro(num)));
+    int a = 20;
+    char b = 'o';
+   float c = 3.1;
+   
+printf(" a: %d, b: %c, c: %.2f", a,b,c);
+alteravalor(&a,&c,&b);
+printf(" a: %d, b: %c, c: %.2f", a,b,c);
+
 }
-int dobro(int valor)
+
+void alteravalor (int *x, float *y, char *z)
 {
-    return valor * 2;
+
+ *x = 220;
+*y = 8.9;
+*z = 'a';
 }

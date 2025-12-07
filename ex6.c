@@ -1,15 +1,18 @@
 #include <stdio.h>
-
-int tempo (int horas, int minutos, int segundos);
-
+int dobro (int x, int y);
 int main()
 {
-    int h, m, s;
-    scanf("%d %d %d", &h, &m, &s);
-    printf("tempo em segundis: %d", (tempo(h,m,s)));
+    int a, b;
+    scanf("%d %d", &a, &b);
+printf("o dobro eh: %d\n", dobro(a, b));
+a = dobro(a, NULL);
+b = dobro(NULL, b);
+printf("valor de a dobrado: %d\n b dobrado: %d\n", a, b);
 }
 
-int tempo (int horas, int minutos, int segundos)
+int dobro (int x, int y)
 {
-return segundos + ((horas * 60)*60) + (minutos * 60);
+   return (x*2)+(y*2);
+    
+    
 }

@@ -1,17 +1,16 @@
 #include <stdio.h>
-#include <math.h>
-
-float temperatura(float celsius);
-
+int soma (int *A, int B);
 int main()
 {
-    int num;
-    scanf("%d", &num);
-    printf("temperatura em farenhight: %.2f", (temperatura(num)));
+    int a, b;
+    scanf("%d %d", &a, &b);
+soma(&a,b);
+printf("valor de a somado: %d\n b: %d\n", a,b);
 
 }
 
-float temperatura ( float celsius)
+int soma (int *A, int B)
 {
-    return (celsius * ( 9.0/ 5.0)) + 32.0;
+*A = (*A+B);
+
 }
