@@ -1,22 +1,21 @@
 #include <stdio.h>
-#include <math.h>
-
-float maior(float valor1, float valor2);
 
 int main()
 {
-    float num1, num2;
-    scanf("%f %f", &num1, &num2);
-    printf("maior: %.2f", (maior(num1, num2)));
+    
+    int mat[5];
+    int i;
+    int *x;
 
-}
-
-float maior ( float valor1, float valor2)
-{
-    if(valor1 > valor2)
+    for(i = 0; i<5; i++)
     {
-        return valor1;
-    }else{
-        return valor2;
+        scanf("%d", &mat[i]);
+       x = &mat[i];
+        printf("%d", *x * 2);
     }
+    
+
+        
+    
+return 0;
 }

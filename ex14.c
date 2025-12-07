@@ -1,37 +1,21 @@
 #include <stdio.h>
-#include <math.h>
 
-float carro(float valor1, float valor2);
-
+float notas( float *media, float *pond, float n1, float n2);
 int main()
 {
-    float km, litro;
-    scanf("%f %f", &km, &litro);
-    if( (carro(km, litro)) == 1)
-    {
-printf("venda o carro");
-    }
-    else if((carro(km, litro)) == 2)
-{
-    printf("economico");
-}else if((carro(km, litro)) == 3)
-    printf("super economico");
+float nota1, nota2;
+
+scanf("%f %f", &nota1, &nota2);
+float x,y;
+
+notas(&x, &y, nota1, nota2);
+
+    return 0;
 }
 
-float carro ( float valor1, float valor2)
+float notas( float *media, float *pond, float n1, float n2)
 {
-    float kl;
-    kl = valor1/valor2;
-    if(kl<8)
-    {
-        return 1;
-    }
-    else if(kl>8 && kl<14)
-    {
-    return 2;
-    }
-    else if(kl>14)
-    {
-    return 3;
-    }
+*media = (n1 + n2) / 2;
+*pond = (n1 + n2*2)/3;
+printf("media: %.2f\n pond:%.2f", *media, *pond);
 }

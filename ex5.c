@@ -1,16 +1,25 @@
 #include <stdio.h>
-#include <math.h>
-float volume(float raio);
-
+void alteravalor (int x, int y);
 int main()
 {
-    float num;
-    scanf("%f", &num);
-    printf("volume : %f", (volume(num)));
+    int a, b;
+    scanf("%d %d", &a, &b);
+alterarvalor(a, b);
+
 }
-float volume(float raio)
+
+void alterarvalor (int x, int y)
 {
-    float vol;
-    vol = (3.14 * 4 * pow(raio, 3)) / 3;
-    return vol;
+    int alt;
+    if(x>y)
+    {
+       printf("%d %d", x, y); 
+    }
+    else if(y>x)
+    {
+     alt = x;
+     x = y;
+     y = alt;
+        printf("%d %d", x, y);
+    }
 }

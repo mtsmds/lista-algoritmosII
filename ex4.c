@@ -1,22 +1,18 @@
 #include <stdio.h>
-#include <math.h>
-
-float quadrado(float valor);
-
+void alteravalor (int x, int y);
 int main()
 {
-    float num;
-    scanf("%f", &num);
-    if((quadrado(num)) == 0)
-    {
-printf("o numero %.1f é um quadrado perfeito  ", num, (quadrado(num)));
-    }else{
-        printf("nao e quadrado perfeior");
-    }
+    int a, b;
+    scanf("%d %d", &a, &b);
+alterarvalor(a, b);
+
 }
 
-float quadrado(float valor)
+void alterarvalor (int x, int y)
 {
-valor = sqrt(valor);
-return (valor - floor(valor));
+int alt;
+alt = x;
+x = y;
+y = alt;
+printf("%d %d", x, y);
 }
